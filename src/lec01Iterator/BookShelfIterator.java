@@ -1,4 +1,4 @@
-package chap01Iterator;
+package lec01Iterator;
 
 public class BookShelfIterator implements Iterator {
 	private BookShelf bookShelf;
