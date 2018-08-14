@@ -1,4 +1,5 @@
 package lec02template;
+import utilities.Utf8;
 
 public class StringDisplay implements AbstractDisplay {
 	private String string;
@@ -6,7 +7,7 @@ public class StringDisplay implements AbstractDisplay {
 	public StringDisplay(String string) {
 		this.string = string;
 //		this.width = string.getBytes().length;
-		this.width = getWidth(string);
+		this.width = Utf8.getWidth(string);
 	}
 	@Override
 	public void open() {
@@ -31,19 +32,5 @@ public class StringDisplay implements AbstractDisplay {
 			System.out.print("-");
 		}
 		System.out.println("+");
-	}
-	private int getWidth(String string) {
-		int len=0;
-		for (int i=0; i<string.length(); i++) {
-			char c = string.charAt(i);
-			//  (英数字) (\ 記号) (~ 記号) (半角カナ)
-			if ((c <= '\u007e') || (c == '\u00a5')
-					|| (c == '\u203e') || (c >= '\uff61' && c <= '\uff9f')) {
-				len++;
-			} else { // その他 (全角)
-				len += 2;
-			}
-		}
-		return len;
 	}
 }
