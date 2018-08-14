@@ -3,7 +3,7 @@ package utilities;
 public class Utf8 {
 	// getWidth calculates the width of a string
 	// for the console,
-	// where zenkaku characters count for two.
+	// where zenkaku characters account for two.
 	public static int getWidth(String string) {
 		int len=0;
 		for (int i=0; i<string.length(); i++) {
