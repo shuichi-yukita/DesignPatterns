@@ -1,4 +1,4 @@
-package Lec03singleton;
+package lec03singleton;
 
 public class Singleton {
 	private static Singleton singleton = new Singleton();

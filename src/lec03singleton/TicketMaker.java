@@ -1,4 +1,4 @@
-package Lec03singleton;
+package lec03singleton;
 
 public class TicketMaker {
 	private int ticket = 1000;
