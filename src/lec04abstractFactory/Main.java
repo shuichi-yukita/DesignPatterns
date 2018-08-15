@@ -12,7 +12,7 @@ public class Main {
 		if(args.length != 1) {
 			System.out.println("Usage: java Main factory_class_name");
 			System.out.println("Example 1: java Main lec04abstractFactory.listfactory.ListFactory");
-			System.out.println("Example 2: java Main tablefactory.TableFactory");
+			System.out.println("Example 2: java Main lec04abstractFactory.tablefactory.TableFactory");
 			System.exit(0);
 		}
 		Factory factory = Factory.getFactory(args[0]);
